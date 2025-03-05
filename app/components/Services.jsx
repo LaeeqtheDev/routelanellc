@@ -28,7 +28,7 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section id="about" className="py-12">
+    <section id="services" className="py-12">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
         {/* Left Column: Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-96">
