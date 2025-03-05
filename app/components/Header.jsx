@@ -2,14 +2,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Home, User, Briefcase, Mail, Truck } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, Mail, Truck, Phone } from 'lucide-react';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="relative flex justify-between items-center p-4 bg-white">
-      {/* Left: Logo from public folder */}
+      {/* Left: Logo */}
       <div className="flex items-center gap-1">
         <Link href="/">
           <Truck size={50} />
@@ -47,14 +47,21 @@ const Header = () => {
         </ul>
       </nav>
 
-      {/* Right: Desktop Email */}
-      <div className="hidden md:flex items-center space-x-1 text-sm text-black">
+      {/* Right: Desktop Email and Phone */}
+      <div className="hidden md:flex items-center space-x-2 text-sm text-black">
         <Mail size={16} />
         <a
           href="mailto:routelanellc@gmail.com"
           className="hover:text-green-500 cursor-pointer"
         >
           EMAIL
+        </a>
+        <Phone size={16} />
+        <a
+          href="tel:+18282036854"
+          className="hover:text-green-500 cursor-pointer"
+        >
+          +1 (828) 203-6854
         </a>
       </div>
 
@@ -117,6 +124,15 @@ const Header = () => {
                   className="text-sm text-black hover:text-green-500 cursor-pointer"
                 >
                   EMAIL
+                </a>
+              </li>
+              <li className="flex items-center space-x-1">
+                <Phone size={16} />
+                <a
+                  href="tel:+18282036854"
+                  className="text-sm text-black hover:text-green-500 cursor-pointer"
+                >
+                  +1 (828) 203-6854
                 </a>
               </li>
             </ul>
