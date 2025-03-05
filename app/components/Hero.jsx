@@ -13,9 +13,11 @@ const Hero = () => {
           <p className="mt-4 text-gray-700 text-lg md:text-xl">
             Delivering Success One Mile at a Time
           </p>
-          <button className="mt-8 px-6 py-3 bg-black text-white border border-black rounded-md transition duration-300 hover:bg-white hover:text-black">
-            Get Started
-          </button>
+          <a href="tel:+18282036854">
+            <button className="mt-8 px-6 py-3 bg-black text-white border border-black rounded-md transition duration-300 hover:bg-white hover:text-black">
+              Get Started
+            </button>
+          </a>
         </div>
 
         {/* Right: Image */}
