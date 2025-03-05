@@ -4,8 +4,7 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 const locations = [
-  "100E OTWAY, ODESSA, MO",
-  "37 GREEN ACRES, LAHORE, PK",
+  "154 White St, Hendersonville, NC 28739"
 ];
 
 const OurLocations = () => {
