@@ -9,16 +9,16 @@ const ContactUs = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
-    const mailtoLink = `mailto:routelanellc@gmail.com?subject=Message from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    const mailtoLink = `mailto:routelanellc@gmail.com?subject=Contact Form Submission&body=Name: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
     
-    window.location.href = mailtoLink;
+    window.location.href = mailtoLink; // Opens the user's email client with pre-filled details
   };
 
   return (
@@ -27,7 +27,7 @@ const ContactUs = () => {
         {/* Left Column: Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-96">
           <Image
-            src="/contact.png" // Replace with your actual image path
+            src="/contact.png"
             alt="Contact Us"
             fill
             className="object-cover rounded-lg"
@@ -37,18 +37,14 @@ const ContactUs = () => {
         {/* Right Column: Contact Form */}
         <div className="w-full md:w-1/2">
           <header className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-800">
-              Contact Us Now
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-800">Contact Us Now</h2>
             <p className="text-lg text-gray-700">
               We'd love to hear from you. Fill out the form below to get in touch.
             </p>
           </header>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-gray-700">
-                Name
-              </label>
+              <label htmlFor="name" className="block text-gray-700">Name</label>
               <input
                 id="name"
                 type="text"
@@ -60,9 +56,7 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700">
-                Email
-              </label>
+              <label htmlFor="email" className="block text-gray-700">Email</label>
               <input
                 id="email"
                 type="email"
@@ -74,9 +68,7 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-700">
-                Message
-              </label>
+              <label htmlFor="message" className="block text-gray-700">Message</label>
               <textarea
                 id="message"
                 className="w-full border rounded-md p-2"
