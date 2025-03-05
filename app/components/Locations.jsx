@@ -11,7 +11,7 @@ const OurLocations = () => {
   return (
     <section className="py-12">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
-        {/* Text & Locations List Column: First on mobile, second on desktop */}
+        {/* Text & Locations List Column */}
         <div className="order-1 md:order-2 w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">
             Our Locations
@@ -30,11 +30,17 @@ const OurLocations = () => {
               </div>
             ))}
           </div>
-          <button className="mt-6 px-6 py-3 bg-black text-white border border-black rounded-md transition duration-300 hover:bg-white hover:text-black mx-auto">
+          {/* Updated Button with Link */}
+          <a
+            href="https://maps.app.goo.gl/43rxmCfg5eMrr8H4A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 px-6 py-3 bg-black text-white border border-black rounded-md transition duration-300 hover:bg-white hover:text-black mx-auto text-center w-fit"
+          >
             View All Locations
-          </button>
+          </a>
         </div>
-        {/* Image Column: Second on mobile, first on desktop */}
+        {/* Image Column */}
         <div className="order-2 md:order-1 relative w-full md:w-1/2 h-64 md:h-96">
           <Image
             src="/location.png" // Replace with your actual image path
