@@ -97,18 +97,20 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                {/* Action Button */}
-                <button
-                  className={`mt-auto px-4 py-2 rounded-md font-semibold 
-                    border transition duration-300 
-                    ${
-                      plan.bgColor === "bg-black"
-                        ? "bg-white text-black border-white hover:bg-black hover:text-white"
-                        : "bg-black text-white border-black hover:bg-white hover:text-black"
-                    }`}
-                >
-                  Get Started
-                </button>
+                {/* Action Button - Calls the given number */}
+                <a href="tel:+18282036854" className="mt-auto">
+                  <button
+                    className={`w-full px-4 py-2 rounded-md font-semibold 
+                      border transition duration-300 
+                      ${
+                        plan.bgColor === "bg-black"
+                          ? "bg-white text-black border-white hover:bg-black hover:text-white"
+                          : "bg-black text-white border-black hover:bg-white hover:text-black"
+                      }`}
+                  >
+                    Get Started
+                  </button>
+                </a>
               </div>
             );
           })}
