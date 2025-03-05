@@ -42,12 +42,15 @@ const Partners = () => {
           }}
         >
           {repeatedPartners.map((partner, index) => (
-            <div key={index} className="flex-shrink-0 w-48 h-24 relative mx-4">
+            <div
+              key={index}
+              className="flex-shrink-0 w-48 h-24 relative mx-4"
+            >
               <Image
                 src={partner.logo}
                 alt={partner.name}
                 fill
-                className="object-contain filter grayscale"
+                className="object-contain filter grayscale hover:filter-none transition duration-300"
               />
             </div>
           ))}
