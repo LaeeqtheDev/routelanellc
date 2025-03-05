@@ -1,6 +1,5 @@
 "use client";
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, Home, User, Briefcase, Mail, Truck, Phone } from 'lucide-react';
 
@@ -40,7 +39,7 @@ const Header = () => {
           </li>
           <li className="flex items-center space-x-1">
             <Mail size={16} />
-            <Link href="/contact" className="hover:text-green-500 transition">
+            <Link href="#contact" className="hover:text-green-500 transition">
               Contact
             </Link>
           </li>
@@ -110,7 +109,7 @@ const Header = () => {
               <li className="flex items-center space-x-1">
                 <Mail size={16} />
                 <Link
-                  href="/contact"
+                  href="#contact"
                   onClick={() => setMenuOpen(false)}
                   className="hover:text-green-500 transition"
                 >
