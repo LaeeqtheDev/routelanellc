@@ -28,13 +28,13 @@ const Header = () => {
           </li>
           <li className="flex items-center space-x-1">
             <User size={16} />
-            <Link href="/about" className="hover:text-green-500 transition">
+            <Link href="#about" className="hover:text-green-500 transition">
               About
             </Link>
           </li>
           <li className="flex items-center space-x-1">
             <Briefcase size={16} />
-            <Link href="/services" className="hover:text-green-500 transition">
+            <Link href="#services" className="hover:text-green-500 transition">
               Services
             </Link>
           </li>
@@ -90,7 +90,7 @@ const Header = () => {
               <li className="flex items-center space-x-1">
                 <User size={16} />
                 <Link
-                  href="/about"
+                  href="#about"
                   onClick={() => setMenuOpen(false)}
                   className="hover:text-green-500 transition"
                 >
@@ -100,7 +100,7 @@ const Header = () => {
               <li className="flex items-center space-x-1">
                 <Briefcase size={16} />
                 <Link
-                  href="/services"
+                  href="#services"
                   onClick={() => setMenuOpen(false)}
                   className="hover:text-green-500 transition"
                 >
