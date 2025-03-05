@@ -1,10 +1,28 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const mailtoLink = `mailto:routelanellc@gmail.com?subject=Message from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    
+    window.location.href = mailtoLink;
+  };
+
   return (
-    <section className="py-12">
+    <section id="contact" className="py-12">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
         {/* Left Column: Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-96">
@@ -15,6 +33,7 @@ const ContactUs = () => {
             className="object-cover rounded-lg"
           />
         </div>
+
         {/* Right Column: Contact Form */}
         <div className="w-full md:w-1/2">
           <header className="text-center mb-6">
@@ -25,7 +44,7 @@ const ContactUs = () => {
               We'd love to hear from you. Fill out the form below to get in touch.
             </p>
           </header>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-gray-700">
                 Name
@@ -35,6 +54,9 @@ const ContactUs = () => {
                 type="text"
                 className="w-full border rounded-md p-2"
                 placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
               />
             </div>
             <div>
@@ -46,6 +68,9 @@ const ContactUs = () => {
                 type="email"
                 className="w-full border rounded-md p-2"
                 placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
               />
             </div>
             <div>
@@ -57,6 +82,9 @@ const ContactUs = () => {
                 className="w-full border rounded-md p-2"
                 rows={4}
                 placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
               ></textarea>
             </div>
             <button
