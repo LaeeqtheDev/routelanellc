@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { DollarSign, CreditCard, Coins, Send } from "lucide-react";
 
 const paymentPartners = [
-  { name: "Wise", color: "text-green-600", icon: DollarSign },
-  { name: "PayPal", color: "text-blue-600", icon: CreditCard },
-  { name: "MoneyGram", color: "text-yellow-600", icon: Coins },
-  { name: "Zelle", color: "text-purple-600", icon: Send },
+  { name: "Wise", logo: "/wise.svg" },
+  { name: "PayPal", logo: "/paypal.svg" },
+  { name: "MoneyGram", logo: "/moneygram-seeklogo.png" },
+  { name: "Zelle", logo: "/zelle.svg" }, // Add Zelle logo if available
 ];
 
 const PaymentPartners = () => {
@@ -23,18 +22,21 @@ const PaymentPartners = () => {
             Our trusted partners for seamless international transactions.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {paymentPartners.map((partner, idx) => {
-              const Icon = partner.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl shadow p-6 flex flex-col items-center justify-center"
-                >
-                  <Icon className={`h-12 w-12 ${partner.color} mb-4`} />
-                  <h3 className="text-2xl font-bold">{partner.name}</h3>
-                </div>
-              );
-            })}
+            {paymentPartners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-xl shadow p-6 flex flex-col items-center justify-center"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={60}
+                  height={60}
+                  className="mb-4"
+                />
+                <h3 className="text-2xl font-bold">{partner.name}</h3>
+              </div>
+            ))}
           </div>
         </div>
         {/* Right Column: Image */}
