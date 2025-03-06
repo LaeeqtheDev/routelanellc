@@ -11,7 +11,7 @@ import {
 const truckPlans = [
   {
     name: "Box Truck",
-    rate: "8% per load",
+    rate: "10% per load",
     icon: Package,
     bgColor: "bg-black",
     textColor: "text-white",
@@ -25,7 +25,7 @@ const truckPlans = [
   },
   {
     name: "Hotshot",
-    rate: "5% per load",
+    rate: "10% per load",
     icon: Zap,
     bgColor: "bg-white",
     textColor: "text-black",
