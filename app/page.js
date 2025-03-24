@@ -12,6 +12,9 @@ import OurServices from "./components/Services";
 import Statistics from "./components/Stats";
 import OurTeam from "./components/Team";
 import ClientTestimonials from "./components/Testimonals";
+import Gsap from "./components/Gsap";
+import TrustedLoadboards from "./components/TrustedLoads";
+import ComplianceCheck from "./components/Comp";
 
 export default function Home() {
   return (
@@ -22,7 +25,11 @@ export default function Home() {
       <OurServices/>
       <AboutUs/>
       <Statistics/>
+    
       <Pricing/>
+      <Gsap/>
+      <ComplianceCheck/>
+      <TrustedLoadboards/>
       <PaymentPartners/>
       <ClientTestimonials/>
       <OurTeam/>
