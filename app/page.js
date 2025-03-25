@@ -16,6 +16,8 @@ import Gsap from "./components/Gsap";
 import TrustedLoadboards from "./components/TrustedLoads";
 import ComplianceCheck from "./components/Comp";
 
+import Missing from "./components/Missing"
+
 export default function Home() {
   return (
     <div className="min-h-screen mx-auto container">
@@ -26,9 +28,11 @@ export default function Home() {
       <AboutUs/>
       <Statistics/>
     
+    
       <Pricing/>
       <Gsap/>
       <ComplianceCheck/>
+      <Missing/>
       <TrustedLoadboards/>
       <PaymentPartners/>
       <ClientTestimonials/>

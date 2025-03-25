@@ -23,11 +23,11 @@ const Hero = () => {
         {/* Right: Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src="/hero-bg.jpg"
+            src="/hero2.jpeg"
             alt="Hero Background"
             width={800}
             height={600}
-            className="object-contain"
+            className="object-contain rounded-full"
           />
         </div>
       </div>

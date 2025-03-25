@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes truckMove {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(20px, 10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-truckMove {
+    animation: truckMove 4s linear infinite;
+  }
+  
