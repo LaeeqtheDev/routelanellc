@@ -30,9 +30,9 @@ const OurLocations = () => {
               </div>
             ))}
           </div>
-          {/* Updated Button with Link */}
+          {/* Updated Button with New Google Maps Link */}
           <a
-            href="https://maps.app.goo.gl/43rxmCfg5eMrr8H4A"
+            href="https://maps.app.goo.gl/nCwCL55xYsHLRiwf8?g_st=ac"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 px-6 py-3 bg-black text-white border border-black rounded-md transition duration-300 hover:bg-white hover:text-black mx-auto text-center w-fit"
